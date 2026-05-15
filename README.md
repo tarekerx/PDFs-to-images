@@ -14,11 +14,26 @@ cd YOUR_REPO
 
 ### 2. Install Poppler (required by pdf2image)
 
-| OS | Command |
-|----|---------|
-| **Windows** | Download from [poppler-windows](https://github.com/oschwartz10612/poppler-windows/releases) and add `bin/` to your PATH |
-| **macOS** | `brew install poppler` |
-| **Linux** | `sudo apt install poppler-utils` |
+**Windows:**
+1. Go to https://github.com/oschwartz10612/poppler-windows/releases
+2. Download the latest `.zip` file (e.g. `Release-24.xx.x.zip`)
+3. Extract it anywhere, for example `C:\poppler`
+4. Add the `bin` folder to your system PATH:
+   - Search **"Environment Variables"** in the Start menu
+   - Under **System Variables**, find `Path` → click **Edit**
+   - Click **New** and add `C:\poppler\Library\bin`
+   - Click OK to save
+5. Open a new terminal and verify with: `pdftoppm -v`
+
+**macOS:**
+```bash
+brew install poppler
+```
+
+**Linux:**
+```bash
+sudo apt install poppler-utils
+```
 
 ### 3. Create and activate a virtual environment
 
